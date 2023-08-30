@@ -1,0 +1,14 @@
+{
+  "prettier.documentSelectors": ["**/*.astro"],
+  "[astro]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "cssvar.files": [
+    "./node_modules/open-props/open-props.min.css",
+    "assets/styles/variables.css"
+  ],
+  "cssvar.ignore": [],
+  "cssvar.extensions": [
+    "astro", "css"
+  ]
+}

@@ -1,0 +1,36 @@
+---
+// import Resets from '@advanced-astro/astro-resets'
+import Resets from '~/components/Resets.astro'
+import BaseHead from '~/components/BaseHead.astro'
+import Footer from '~/components/Footer.astro'
+import Background from '~/components/Background.astro'
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead />
+		<Resets />
+		<script is:inline src="/js/beam.min.js" data-token="7797be8d-4452-4a49-8fb8-13251f192b10" async></script>
+	</head>
+
+	<body>
+		<slot />
+		<Footer />
+		<Background />
+		<style>
+			:root {
+				--font-brand: 'Rouna', sans-serif;
+			}
+			html {
+				background-color: hsl(var(--sand-12-hsl));
+				font-size: 150%;
+			}
+			body {
+				display: grid;
+				min-height: 100dvh;
+				place-content: center;
+			}
+		</style>
+	</body>
+</html>

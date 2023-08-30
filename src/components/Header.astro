@@ -1,0 +1,43 @@
+---
+import FlipCard from '~/components/FlipCard.astro'
+import Link from '~/components/Link.astro'
+
+import { Image } from 'astro:assets'
+import Avatar from '../assets/images/black_360.webp'
+
+import { SITE } from '~/config'
+const soundcloud = 'https://soundcloud.com/' + SITE.SOUNDCLOUD_ID
+const instgram = 'https://www.instagram.com/' + SITE.INSTAGRAM_ID
+---
+
+<header>
+	<FlipCard>
+		<!-- <Image slot="front" id="avatar" src={Avatar} height={Avatar.height} width={Avatar.width} alt="Avatar" /> -->
+		<img slot="front" id="cover" src={Avatar.src} alt="black item" />
+		<h1>{SITE.TITLE}</h1>
+		<ul aria-label="social media links" role="list">
+			<Link href={soundcloud} title="SoundCloud" />
+			<Link href={instgram} title="Instagram" />
+		</ul>
+	</FlipCard>
+</header>
+
+<style>
+	header {
+		text-align: center;
+		padding-top: var(--spacing-1);
+		user-select: none;
+		min-width: content-fit;
+	}
+	h1 {
+		color: hsl(var(--gray-12-hsl));
+		font-size: var(--font-size-fluid-3);
+		font-weight: var(--font-weight-7);
+		padding-top: var(--size-9);
+	}
+	#cover {
+		border-radius: var(--radius-blob-2);
+		block-size: 360px;
+		aspect-ratio: var(--ratio-box);
+	}
+</style>

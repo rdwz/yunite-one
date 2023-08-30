@@ -1,0 +1,24 @@
+---
+interface Props {
+	element?: string
+}
+
+const { element = 'html' } = Astro.props
+const color = 0xa53a44
+const backgroundColor = 0x1f1016
+---
+
+<script is:inline src="/js/p5.js"></script>
+<script is:inline src="/js/vanta.topology.js"></script>
+<script is:inline define:vars={{ element, color, backgroundColor }}>
+	VANTA.TOPOLOGY({
+		el: element,
+		mouseControls: false,
+		touchControls: false,
+		gyroControls: false,
+		scale: 1.0,
+		scaleMobile: 1.0,
+		color: color,
+		backgroundColor: backgroundColor,
+	})
+</script>

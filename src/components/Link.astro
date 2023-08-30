@@ -1,0 +1,22 @@
+---
+interface Props {
+	title: string
+	href: string
+}
+
+const { href, title } = Astro.props
+---
+
+<li>
+	<a href={href} target="_blank">{title}</a>
+</li>
+
+<style>
+	a:link,
+	a:visited {
+		color: white;
+	}
+	a:hover {
+		font-weight: var(--font-weight-7);
+	}
+</style>

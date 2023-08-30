@@ -1,0 +1,47 @@
+---
+const currentYear = new Date().getFullYear()
+---
+
+<footer>
+	<ul role="list">
+		<li>&copy; {currentYear} Julia Tillmanns</li>
+		<li>&lt;Web&nbsp;Dev=&apos;<a href="https://rdwz.one" target="_blank">RDWZ</a>&apos;/&gt;</li>
+	</ul>
+</footer>
+
+<style>
+	a:link,
+	a:visited {
+		color: hsl(var(--gray-4-hsl));
+		text-decoration: none;
+	}
+
+	footer {
+		color: hsl(var(--gray-4-hsl));
+		bottom: var(--size-1);
+		font-family: var(--font-mono);
+		font-size: var(--font-size-0);
+		font-weight: var(--font-weight-4);
+		opacity: 0.6;
+		position: absolute;
+		text-align: center;
+		text-shadow: 1px 1px 1px hsl(var(--gray-12-hsl));
+		user-select: none;
+		width: 100%;
+	}
+
+	ul {
+		margin: 0;
+	}
+
+	li {
+		display: inline;
+	}
+
+	li:not(:first-child) {
+		margin-left: var(--size-2);
+	}
+	p {
+		color: hsl(var(--gray-6-hsl));
+	}
+</style>

@@ -1,0 +1,25 @@
+---
+import Layout from '~/layouts/Layout.astro'
+import Header from '~/components/Header.astro'
+
+import { SITE } from '~/config'
+
+interface Props {
+	title?: string
+	description?: string
+}
+
+const { title = SITE.TITLE, description = SITE.DESCRIPTION } = Astro.props
+---
+
+<Layout {title} {description}>
+	<main>
+		<Header {title} />
+	</main>
+</Layout>
+
+<style>
+	ul {
+		padding-top: var(--size-9);
+	}
+</style>

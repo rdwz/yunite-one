@@ -1,0 +1,4 @@
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}

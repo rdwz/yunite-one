@@ -1,0 +1,51 @@
+{
+  "name": "yunite.one",
+  "type": "module",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "author": {
+    "name": "Marc RDWZ",
+    "url": "https://github.com/rdwz"
+  },
+  "homepage": "https://yunite.one",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rdwz/yunite.one"
+  },
+  "keywords": [
+    "artist-profile-page",
+    "astro"
+  ],
+  "scripts": {
+    "astro": "astro",
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "check": "astro check && npm run lint:check",
+    "lint:check": "prettier --check \"src/**/*.astro\"",
+    "lint:fix": "prettier --cache --write \"src/**/*.astro\"",
+    "preview": "astro preview",
+    "deploy:dev": "vercel",
+    "deploy:prod": "vercel --prod",
+    "webp": "go-webp excludeFiles=\"instagram-post.png instagram-story.png\""
+  },
+  "dependencies": {
+    "astro": "^3.0.12"
+  },
+  "devDependencies": {
+    "astro-compress": "^2.0.15",
+    "astro-compressor": "^0.4.0",
+    "astro-robots-txt": "^1.0.0",
+    "astro-sitemap": "^1.0.0",
+    "autoprefixer": "^10.4.15",
+    "open-props": "^1.5.15",
+    "postcss": "^8.4.29",
+    "postcss-jit-props": "^1.0.13",
+    "postcss-nesting": "^12.0.1",
+    "prettier": "^3.0.3",
+    "prettier-plugin-astro": "^0.12.0",
+    "sharp": "^0.32.5",
+    "typescript": "^5.2.2"
+  }
+}

@@ -1,0 +1,52 @@
+---
+import bodyDefaults from './styles/bodyDefaults.css?raw'
+import boxSizing from './styles/boxSizing.css?raw'
+import breakWords from './styles/breakWords.css?raw'
+import consistentFonts from './styles/consistentFonts.css?raw'
+import defaultMargins from './styles/defaultMargins.css?raw'
+import imageDefaults from './styles/imageDefaults.css?raw'
+import listStyles from './styles/listStyles.css?raw'
+import reducedMotion from './styles/reducedMotion.css?raw'
+import smoothScroll from './styles/smoothScroll.css?raw'
+import systemFonts from './styles/systemFonts.css?raw'
+
+/** All defaults: true */
+export interface Props {
+	/** Set body defaults: accessible Line Height, Min Height */
+	bodyDefaults?: boolean
+	/** Use a more-intuitive box-sizing model */
+	boxSizing?: boolean
+	/** Avoid text overflows */
+	breakWords?: boolean
+	/** Remove built-in form typography styles */
+	consistentFonts?: boolean
+	/** Removes all default margins */
+	defaultMargins?: boolean
+	/** Set image defaults */
+	imageDefaults?: boolean
+	/** Remove padding and bullets for <ul> lists with a list role */
+	listStyles?: boolean
+	reducedMotion?: boolean
+	/** Default to native smooth scrolling */
+	smoothScroll?: boolean
+	/** Ensure system font as default fallback */
+	systemFonts?: boolean
+}
+const props = { ...Astro.props } as Props
+
+const rawStylesCSS = [
+	props.bodyDefaults === false ? null : bodyDefaults,
+	props.boxSizing === false ? null : boxSizing,
+	props.breakWords === false ? null : breakWords,
+	props.consistentFonts === false ? null : consistentFonts,
+	props.defaultMargins === false ? null : defaultMargins,
+	props.imageDefaults === false ? null : imageDefaults,
+	props.listStyles === false ? null : listStyles,
+	props.reducedMotion === false ? null : reducedMotion,
+	props.smoothScroll === false ? null : smoothScroll,
+	props.systemFonts === false ? null : systemFonts,
+].join('\n')
+---
+
+<!-- Resets -->
+<style is:global is:inline set:html={rawStylesCSS}></style>
