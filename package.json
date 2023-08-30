@@ -1,0 +1,54 @@
+{
+  "name": "@advanced-astro/base",
+  "type": "module",
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": {
+    "name": "Advanced Astro",
+    "email": "hi@advanced-astro.dev",
+    "url": "https://advanced-astro.dev"
+  },
+  "homepage": "https://github.com/advanced-astro/base#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/advanced-astro/base.git"
+  },
+  "keywords": [
+    "astro",
+    "astro-build",
+    "astro-template",
+    "astro-theme",
+    "jamstack",
+    "jamstack-theme",
+    "robots-txt",
+    "sitemap-xml",
+    "starter-kit",
+    "static-site-generator",
+    "template"
+  ],
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "vercel",
+    "deploy": "vercel --prod",
+    "format:check": "prettier --check .",
+    "format:write": "prettier --cache --write src/**/*.astro"
+  },
+  "dependencies": {
+    "astro": "^3.0.2"
+  },
+  "devDependencies": {
+    "astro-compress": "^2.0.14",
+    "astro-compressor": "^0.4.0",
+    "astro-robots-txt": "^0.5.0",
+    "astro-sitemap": "^0.6.0",
+    "autoprefixer": "^10.4.15",
+    "open-props": "^1.5.15",
+    "postcss": "^8.4.29",
+    "postcss-jit-props": "^1.0.13",
+    "postcss-nesting": "^12.0.1",
+    "prettier": "^3.0.3",
+    "prettier-plugin-astro": "^0.12.0"
+  }
+}

@@ -1,0 +1,36 @@
+---
+interface Props {
+  title: string
+}
+
+const title = Astro.props.title
+---
+
+<header>
+  <h1 class="text-gradient">
+    <a href="https://advanced-astro.dev">{title}</a>
+  </h1>
+</header>
+
+<style>
+  h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 1em;
+
+    animation:
+      var(--animation-scale-down) reverse,
+      var(--animation-fade-out) reverse;
+    animation-timing-function: var(--ease-squish-5);
+    animation-duration: 1s;
+  }
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
+</style>
