@@ -1,7 +1,5 @@
 # [YuNite](https://yunite.one) - Artist Profile Page
 
-![Website Banner](https://yunite.one/images/yunite_1600x630.webp)
-
 ## Build with 🚀 [Astro](https://astro.build)
 
 - [Open Props](https://open-props.style)
