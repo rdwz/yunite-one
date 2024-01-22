@@ -31,7 +31,7 @@
     "webp": "go-webp excludeFiles=\"instagram-post.png instagram-story.png\""
   },
   "dependencies": {
-    "astro": "^3.0.12"
+    "astro": "^4.0.0"
   },
   "devDependencies": {
     "astro-compress": "^2.0.15",
